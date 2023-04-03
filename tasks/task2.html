@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        <a href="../index.html"> Назад</a>
+    </h3>
+    <h3>
+        Розв’язати з використанням рекурсивних і нерекурсивних алгоритмів
+    </h3>
+    <script>
+        function numbers(i){
+            if (i === 0 || i === 1) return 1
+            else {
+                let x_j_1 = 1
+                let x_j_2 = 1
+                let x_j = 0
+                for (let j = 2; j <= i; j++){
+                    x_j = x_j_1 + (2 * x_j_2)
+                    x_j_2 = x_j_1
+                    x_j_1 = x_j
+                }
+                return x_j
+            }
+        }
+        let i10 = numbers(10)
+        document.write(`${i10}`)
+    </script>
+</body>
+</html>

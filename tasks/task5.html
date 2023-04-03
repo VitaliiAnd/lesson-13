@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        <a href="../index.html"> Назад</a>
+    </h3>
+    <h3>
+        Тренажер додавання. Кожні 10 секунд користувачу задають випадковий приклад з 
+        додавання двох цифр і робиться перевірка.
+    </h3>
+    <script>
+        let intervalId = setInterval(sumOfTwo, 10000)
+        function sumOfTwo() {
+            const min = 1
+            const max = 10
+            let num1 = min + Math.floor(Math.random() * (max - min + 1))
+            let num2 = min + Math.floor(Math.random() * (max - min + 1))
+            let sum = num1 + num2
+
+            let answer = parseInt(prompt(`введіть результат:${num1} + ${num2} = ?`))
+            if (sum === answer) alert('Вірно')
+            else alert('НЕвірно')
+        }
+        setTimeout(() => clearInterval(intervalId), 120000)
+    </script>
+</body>
+</html>

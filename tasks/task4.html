@@ -31,7 +31,7 @@
         function translator(word, description) {
             let guessedLetters = 0
             alert(`${description}, кількість букв:${word.length}`)
-            const letterOfTheWord = latterByLetter(word)
+            const letterOfTheWord = letterByLetter(word)
             for (let i = 0; i < word.length; i++){
                 const userLetter = prompt(`Введіть ${i + 1} букву`)
                 if (userLetter.toLocaleLowerCase() === letterOfTheWord().toLowerCase()) guessedLetters++
